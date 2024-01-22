@@ -23,7 +23,7 @@ module.exports = {
     // },
     
     // novoUsuario com input
-    novoUsuario(_, dados) 
+    novoUsuario(_, { dados }) 
     {
         const emailExistente = usuarios
             .some(u => u.email === dados.email )
