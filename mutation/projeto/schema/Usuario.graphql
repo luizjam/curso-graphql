@@ -3,6 +3,15 @@ type Perfil {
     nome: String
 }
 
+input PerfilInput {
+    nome: String
+}
+
+input PerfilFiltro {
+    id: Int
+    nome: String
+}
+
 enum UsuarioStatus {
     ATIVO
     INATIVO

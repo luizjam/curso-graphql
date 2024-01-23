@@ -5,7 +5,30 @@ type Mutation {
     # excluirUsuario(id: Int!): Usuario
     excluirUsuario( filtro: UsuarioFiltro! ): Usuario
 
+    # alterarUsuario(
+    #     id: Int nome: String email: String idade: Int
+    # ): Usuario
+
+    #desafio alterarUsuario com imput e filtro
     alterarUsuario(
-        id: Int nome: String email: String idade: Int
+        filtro: UsuarioFiltro!
+        dados: UsuarioInput!
     ): Usuario
+    
+    # Mutations de Perfil
+    # novoPerfil(nome:String, email:String, idade:Int): Perfil!
+    novoPerfil(dados: PerfilInput!): Perfil!
+
+    # excluirPerfil(id: Int!): Perfil
+    excluirPerfil( filtro: PerfilFiltro! ): Perfil
+
+    # alterarPerfil(
+    #     id: Int nome: String email: String idade: Int
+    # ): Perfil
+
+    #desafio alterarPerfil com imput e filtro
+    alterarPerfil(
+        filtro: PerfilFiltro!
+        dados: PerfilInput!
+    ): Perfil
 }
